@@ -2,10 +2,11 @@ require 'DockingStation'
 
 describe DockingStation do
 
-  # it 'responds to release bike' do
-  #   docking_station = DockingStation.new
-  #   expect(docking_station).to respond_to(:release_bike)
-  # end
+  it { expect(:release_bike).not_to be_empty }
+
+  it {expect(:release_bike).to respond_to(:working?) }
+
+  it {expect(:working?).to be true}
 
   it { is_expected.to respond_to(:release_bike) }
 
